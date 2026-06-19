@@ -13,7 +13,7 @@
 Settings → Pages → Source 选择 `main` 分支根目录 `/ (root)`，保存后访问：
 `https://<用户名>.github.io/<仓库名>/`
 
-首页：https://alexchan90.github.io/knowledge-map/
+首页：[https://alexchan90.github.io/knowledge-map/](https://alexchan90.github.io/erp-knowledge/)
 
 ## 说明
 
