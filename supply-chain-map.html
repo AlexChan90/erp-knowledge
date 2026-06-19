@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>供应链 · 运营 · 流程管理 全局知识地图</title>
+<style>
+  :root{
+    --bg:#f6f7fa; --ink:#1d2330; --sub:#5b6473; --line:#dce1e9; --card:#fff;
+    --cert:#2563eb; --certbg:#eef3ff;
+    --fw:#0f9d72;   --fwbg:#e8f7f1;
+    --mth:#e07b1a;  --mthbg:#fdf2e6;
+    --dom:#7c4dd6;  --dombg:#f2ecfd;
+    --tec:#0891b2;  --tecbg:#e6f6fa;
+    --org:#64748b;  --orgbg:#eef1f5;
+    --gold:#c9971b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,Segoe UI,sans-serif;
+    line-height:1.5;padding:30px 26px 60px}
+  .wrap{max-width:1240px;margin:0 auto}
+  h1{font-size:25px;margin:0 0 4px;letter-spacing:.5px}
+  .sub{color:var(--sub);font-size:13px;margin-bottom:6px}
+  .legend{display:flex;flex-wrap:wrap;gap:13px;margin:12px 0 8px;font-size:12px;color:var(--sub);align-items:center}
+  .legend .anchor{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--gold)}
+  .star{color:var(--gold)}
+
+  /* synthesis strip */
+  .flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0 26px}
+  .fcol{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;position:relative;box-shadow:0 1px 2px rgba(20,30,50,.04)}
+  .fcol .q{font-size:12px;font-weight:700;color:#fff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px}
+  .fcol h3{margin:0 0 6px;font-size:15px}
+  .fcol p{margin:0;font-size:12.5px;color:var(--sub)}
+  .fcol .pin{margin-top:9px;display:flex;flex-wrap:wrap;gap:5px}
+  .pin b{font-size:11.5px;background:#fff7e6;border:1px solid #f0dca6;color:#8a6a12;border-radius:20px;padding:1px 9px;font-weight:700}
+  .arrow{position:absolute;right:-11px;top:50%;transform:translateY(-50%);z-index:2;color:var(--sub);font-size:18px;font-weight:700}
+  .f1 .q{background:var(--fw)} .f2 .q{background:var(--cert)} .f3 .q{background:var(--mth)}
+
+  /* section cards */
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:13px;margin-bottom:15px;overflow:hidden;box-shadow:0 1px 2px rgba(20,30,50,.04)}
+  .sec > .head{padding:11px 16px;display:flex;align-items:baseline;gap:12px;color:#fff}
+  .sec > .head .t{font-size:16px;font-weight:700}
+  .sec > .head .r{font-size:12px;opacity:.92}
+  .body{padding:13px 16px}
+  .grp{margin-bottom:11px}
+  .grp:last-child{margin-bottom:0}
+  .grp .gt{font-size:13px;font-weight:700;margin-bottom:6px;color:var(--ink)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12px;background:#f2f4f8;border:1px solid #e5e9ef;border-radius:7px;padding:3px 10px;color:#3c4452}
+  .chip small{color:#8a93a3;font-weight:400}
+  .chip.anc{background:#fff7e6;border:1.5px solid var(--gold);color:#7a5d10;font-weight:700}
+  .chip.anc .star{margin-right:3px}
+
+  .cert .head{background:var(--cert)} .fw .head{background:var(--fw)} .mth .head{background:var(--mth)}
+  .dom .head{background:var(--dom)} .tec .head{background:var(--tec)} .org .head{background:var(--org)}
+
+  footer{margin-top:26px;font-size:11.5px;color:var(--sub);border-top:1px solid var(--line);padding-top:13px}
+  @media print{body{background:#fff;padding:0} .sec,.fcol{box-shadow:none;break-inside:avoid}}
+  @media (max-width:760px){.flow{grid-template-columns:1fr}.arrow{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>供应链 · 运营 · 流程管理 — 全局知识地图</h1>
+  <div class="sub">把 CPIM、CSCP/SCOR、CLTD、APQC PCF 放进同一张版图,按 6 个维度展开 · 数据截至 2026 年</div>
+  <div class="legend">
+    <span class="anchor"><span class="star">★</span> = 你关注的四个锚点(CPIM · CSCP/SCOR DS · CLTD · APQC PCF)</span>
+  </div>
+
+  <!-- synthesis -->
+  <div class="flow">
+    <div class="fcol f1">
+      <span class="q">① 有哪些流程</span>
+      <h3>流程地图层</h3>
+      <p>先看清企业/供应链上到底有哪些流程,建立统一语言与对标口径。</p>
+      <div class="pin"><b>★ APQC PCF(企业全景)</b><b>★ SCOR DS(供应链)</b></div>
+      <span class="arrow">→</span>
+    </div>
+    <div class="fcol f2">
+      <span class="q">② 怎么做专业</span>
+      <h3>领域认证层</h3>
+      <p>每个领域如何规划、执行到专业水准 —— 靠领域知识体系与认证。</p>
+      <div class="pin"><b>★ CPIM 计划库存</b><b>★ CLTD 物流</b><b>★ CSCP 端到端</b></div>
+      <span class="arrow">→</span>
+    </div>
+    <div class="fcol f3">
+      <span class="q">③ 怎么持续做好</span>
+      <h3>方法论层</h3>
+      <p>在企业层面统筹所有流程的衡量与持续改进。</p>
+      <div class="pin"><b>BPM + 对标</b><b>精益六西格玛 / TOC</b><b>数字化</b></div>
+    </div>
+  </div>
+
+  <!-- 1. 认证 -->
+  <div class="sec cert">
+    <div class="head"><span class="t">一、认证体系</span><span class="r">谁颁发 · 学什么领域</span></div>
+    <div class="body">
+      <div class="grp"><div class="gt">ASCM / APICS(你所在体系)</div>
+        <div class="chips">
+          <span class="chip anc"><span class="star">★</span>CPIM <small>计划与库存(内部·战术)</small></span>
+          <span class="chip anc"><span class="star">★</span>CSCP <small>端到端供应链(跨企业·战略)</small></span>
+          <span class="chip anc"><span class="star">★</span>CLTD <small>物流·运输·分销</small></span>
+          <span class="chip">CTSC <small>供应链转型(2023新)</small></span>
+          <span class="chip">SCOR-P / SCOR DS 背书</span>
+        </div></div>
+      <div class="grp"><div class="gt">相邻领域主流认证</div>
+        <div class="chips">
+          <span class="chip">ISM · CPSM / CPSD <small>采购</small></span>
+          <span class="chip">CIPS 文凭 <small>采购(英)</small></span>
+          <span class="chip">CSCMP · SCpro <small>综合供应链</small></span>
+          <span class="chip">ASQ · CQE / CMQ·OE <small>质量</small></span>
+          <span class="chip">六西格玛 绿带/黑带/黑带大师</span>
+          <span class="chip">DDI · CDDP / CDDL <small>DDMRP</small></span>
+          <span class="chip">PMI · PMP / CAPM <small>项目</small></span>
+          <span class="chip">Lean / 精益认证</span>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 2. 框架与参考模型 -->
+  <div class="sec fw">
+    <div class="head"><span class="t">二、流程框架与参考模型</span><span class="r">回答「有哪些流程 · 是什么」</span></div>
+    <div class="body">
+      <div class="grp"><div class="gt">流程分类 / 供应链参考</div>
+        <div class="chips">
+          <span class="chip anc"><span class="star">★</span>APQC PCF <small>跨行业+行业版·13大类</small></span>
+          <span class="chip anc"><span class="star">★</span>SCOR DS <small>统筹/计划/采购/转化/订单/履行/退货</small></span>
+          <span class="chip">DCOR <small>设计链</small></span>
+          <span class="chip">CCOR <small>客户链</small></span>
+          <span class="chip">VRM 价值参考模型</span>
+        </div></div>
+      <div class="grp"><div class="gt">标准 / 其他领域框架</div>
+        <div class="chips">
+          <span class="chip">ISO 9001 <small>质量</small></span>
+          <span class="chip">ISO 31000 <small>风险</small></span>
+          <span class="chip">ISO 22301 <small>业务连续性</small></span>
+          <span class="chip">ISO 28000 <small>供应链安全</small></span>
+          <span class="chip">ISO 14001 <small>环境</small></span>
+          <span class="chip">ITIL <small>IT服务</small></span>
+          <span class="chip">TOGAF / Zachman <small>企业架构</small></span>
+          <span class="chip">GS1 <small>条码/EPCIS</small></span>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 3. 方法论 -->
+  <div class="sec mth">
+    <div class="head"><span class="t">三、方法论与管理哲学</span><span class="r">回答「怎么做好 · 怎么持续改进」</span></div>
+    <div class="body">
+      <div class="grp"><div class="gt">运营改进引擎</div>
+        <div class="chips">
+          <span class="chip">精益 / TPS 丰田生产方式</span>
+          <span class="chip">六西格玛 / 精益六西格玛 (DMAIC)</span>
+          <span class="chip">约束理论 TOC (DBR)</span>
+          <span class="chip">Kaizen · 5S · TPM · 看板 · VSM</span>
+          <span class="chip">DDMRP 需求驱动MRP</span>
+        </div></div>
+      <div class="grp"><div class="gt">流程与计划管理</div>
+        <div class="chips">
+          <span class="chip">BPM 流程管理 · BPMN 建模</span>
+          <span class="chip">BPR 流程再造</span>
+          <span class="chip">Benchmarking 对标 <small>APQC OSB</small></span>
+          <span class="chip">S&OP → IBP 集成业务计划</span>
+          <span class="chip">TQM · 卓越绩效 (Baldrige/EFQM)</span>
+          <span class="chip">敏捷 / 供应链韧性</span>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 4. 知识域 -->
+  <div class="sec dom">
+    <div class="head"><span class="t">四、核心知识域 / 业务主题</span><span class="r">供应链全流程的内容板块</span></div>
+    <div class="body">
+      <div class="grp"><div class="gt">计划侧(需求 → 供应)</div>
+        <div class="chips">
+          <span class="chip">战略与网络设计</span>
+          <span class="chip">需求计划 · 预测 · CPFR</span>
+          <span class="chip">S&OP / IBP</span>
+          <span class="chip">MPS · MRP · RCCP/CRP</span>
+          <span class="chip">产能管理</span>
+        </div></div>
+      <div class="grp"><div class="gt">执行侧(采购 → 制造 → 交付)</div>
+        <div class="chips">
+          <span class="chip">战略寻源 · 采购 · SRM</span>
+          <span class="chip">库存(EOQ/安全库存/ABC/盘点)</span>
+          <span class="chip">制造执行 · 车间排程</span>
+          <span class="chip">仓储WMS · 运输TMS · 3PL/4PL</span>
+          <span class="chip">分销DRP · 配送网络</span>
+          <span class="chip">订单管理 OTC · 客户服务</span>
+          <span class="chip">逆向物流 · Incoterms</span>
+        </div></div>
+      <div class="grp"><div class="gt">横向贯穿</div>
+        <div class="chips">
+          <span class="chip">质量与持续改进</span>
+          <span class="chip">风险 · 韧性 · BCP</span>
+          <span class="chip">可持续 ESG · Scope 3 · 循环经济</span>
+          <span class="chip">全球供应链 · 贸易合规</span>
+          <span class="chip">成本与金融 (TCO/COGS/现金循环)</span>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 5. 技术 -->
+  <div class="sec tec">
+    <div class="head"><span class="t">五、数字化与技术栈</span><span class="r">使能层 · 让流程跑起来</span></div>
+    <div class="body">
+      <div class="grp"><div class="gt">系统</div>
+        <div class="chips">
+          <span class="chip">ERP <small>SAP/Oracle</small></span>
+          <span class="chip">APS 高级排程</span>
+          <span class="chip">WMS 仓储</span>
+          <span class="chip">TMS 运输</span>
+          <span class="chip">MES 制造执行</span>
+          <span class="chip">PLM · SRM</span>
+        </div></div>
+      <div class="grp"><div class="gt">进阶能力与技术</div>
+        <div class="chips">
+          <span class="chip">控制塔 Control Tower</span>
+          <span class="chip">数字孪生 Digital Twin</span>
+          <span class="chip">AI/ML 预测</span>
+          <span class="chip">IoT · RPA</span>
+          <span class="chip">区块链 · 大数据分析</span>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 6. 组织 -->
+  <div class="sec org">
+    <div class="head"><span class="t">六、知识源 / 标准组织</span><span class="r">去哪里学 · 谁定标准</span></div>
+    <div class="body">
+      <div class="grp"><div class="gt">协会与标准机构</div>
+        <div class="chips">
+          <span class="chip">ASCM/APICS</span>
+          <span class="chip">CSCMP</span>
+          <span class="chip">ISM · CIPS <small>采购</small></span>
+          <span class="chip">APQC <small>流程·对标</small></span>
+          <span class="chip">Demand Driven Institute</span>
+          <span class="chip">ASQ <small>质量</small></span>
+          <span class="chip">PMI <small>项目</small></span>
+          <span class="chip">ISO · GS1 <small>标准</small></span>
+          <span class="chip">Gartner <small>研究·成熟度</small></span>
+        </div></div>
+    </div>
+  </div>
+
+  <footer>
+    读图逻辑:① 流程地图(PCF 企业全景 / SCOR DS 供应链)说明「有哪些流程」→ ② 领域认证(CPIM 计划库存 · CLTD 物流 · CSCP 端到端 · 采购看 ISM/CIPS)说明「怎么做专业」→ ③ 方法论(BPM+对标+精益六西格玛/TOC+数字化)说明「怎么持续做好」。<br>
+    四个锚点定位:APQC PCF = 企业全景地图 · SCOR DS = 供应链流程标准 · CSCP = 端到端战略视角 · CPIM / CLTD = 领域级执行专精。<br>
+    资料来源:ASCM(CPIM/CSCP/CLTD/CTSC、SCOR DS)、APQC(PCF v8.0)、各标准组织公开信息。分类与分层为便于理解的学习框架,非官方权威划分。
+  </footer>
+</div>
+</body>
+</html>

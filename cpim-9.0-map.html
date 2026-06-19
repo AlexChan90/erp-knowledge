@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPIM 9.0 知识地图</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --ink:#1f2430; --sub:#5b6472; --line:#d7dce4; --card:#ffffff;
+    --g1:#2563eb; --g1bg:#eef3ff;   /* 战略层 蓝 */
+    --g2:#0f9d72; --g2bg:#e9f7f1;   /* 计划层 绿 */
+    --g3:#e07b1a; --g3bg:#fdf2e6;   /* 执行层 橙 */
+    --g4:#7c4dd6; --g4bg:#f2ecfd;   /* 支撑层 紫 */
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,Segoe UI,sans-serif;
+    line-height:1.5;padding:32px 28px 60px}
+  .wrap{max-width:1180px;margin:0 auto}
+  header.top{margin-bottom:8px}
+  h1{font-size:26px;margin:0 0 4px;letter-spacing:.5px}
+  .meta{color:var(--sub);font-size:13px;margin-bottom:18px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0 26px;font-size:12.5px;color:var(--sub)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+  .module{display:flex;gap:0;margin-bottom:14px;border:1px solid var(--line);
+    border-radius:12px;background:var(--card);overflow:hidden;box-shadow:0 1px 2px rgba(20,30,50,.04)}
+  .mhead{flex:0 0 252px;padding:14px 16px;border-right:1px solid var(--line);position:relative}
+  .mhead .num{font-size:12px;font-weight:700;letter-spacing:1px;opacity:.85}
+  .mhead .cn{font-size:16px;font-weight:700;margin:3px 0 2px}
+  .mhead .en{font-size:11px;color:var(--sub);line-height:1.35}
+  .wbar{margin-top:10px;height:7px;border-radius:4px;background:#eef0f4;overflow:hidden}
+  .wbar i{display:block;height:100%;border-radius:4px}
+  .wlabel{font-size:11px;color:var(--sub);margin-top:5px}
+  .stripe{position:absolute;left:0;top:0;bottom:0;width:5px}
+
+  .body{flex:1;padding:13px 15px;display:flex;flex-direction:column;gap:9px}
+  .sub{display:flex;gap:9px;align-items:flex-start}
+  .lt{flex:0 0 22px;height:22px;border-radius:6px;color:#fff;font-size:12px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .sc{flex:1}
+  .sc .st{font-size:13.5px;font-weight:600}
+  .tags{margin-top:3px;display:flex;flex-wrap:wrap;gap:5px}
+  .tag{font-size:11px;color:#454c59;background:#f1f3f7;border:1px solid #e6e9ef;
+    border-radius:20px;padding:1px 9px;white-space:nowrap}
+
+  /* group colors */
+  .g1 .stripe{background:var(--g1)} .g1 .lt{background:var(--g1)} .g1 .num{color:var(--g1)} .g1 .wbar i{background:var(--g1)} .g1 .mhead{background:var(--g1bg)}
+  .g2 .stripe{background:var(--g2)} .g2 .lt{background:var(--g2)} .g2 .num{color:var(--g2)} .g2 .wbar i{background:var(--g2)} .g2 .mhead{background:var(--g2bg)}
+  .g3 .stripe{background:var(--g3)} .g3 .lt{background:var(--g3)} .g3 .num{color:var(--g3)} .g3 .wbar i{background:var(--g3)} .g3 .mhead{background:var(--g3bg)}
+  .g4 .stripe{background:var(--g4)} .g4 .lt{background:var(--g4)} .g4 .num{color:var(--g4)} .g4 .wbar i{background:var(--g4)} .g4 .mhead{background:var(--g4bg)}
+
+  .tier{font-size:13px;font-weight:700;color:var(--sub);margin:22px 0 10px;
+    display:flex;align-items:center;gap:8px}
+  .tier .bar{width:4px;height:16px;border-radius:3px}
+  footer{margin-top:30px;font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-top:14px}
+  @media print{body{background:#fff;padding:0} .module{box-shadow:none;break-inside:avoid}}
+  @media (max-width:680px){.module{flex-direction:column}.mhead{flex-basis:auto;border-right:none;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>CPIM 9.0 知识地图 · 全景框架</h1>
+  <div class="meta">ASCM 注册生产与库存管理认证 · 考纲版本 9.0(2026年6月1日生效)· 9 大模块,百分比为考试权重</div>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--g1)"></i>战略层 · 定方向</span>
+    <span><i class="dot" style="background:var(--g2)"></i>计划层 · 配资源(需求→供应→库存)</span>
+    <span><i class="dot" style="background:var(--g3)"></i>执行层 · 落到车间与交付</span>
+    <span><i class="dot" style="background:var(--g4)"></i>支撑层 · 贯穿全局</span>
+  </div>
+</header>
+
+<div class="tier"><span class="bar" style="background:var(--g1)"></span>战略层 · 把供应链对齐到经营战略</div>
+
+<!-- I -->
+<div class="module g1">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 I · 权重 12%</div>
+    <div class="cn">对齐供应链以支撑经营战略</div>
+    <div class="en">Align the Supply Chain to Support the Business Strategy</div>
+    <div class="wbar"><i style="width:86%"></i></div><div class="wlabel">12% — 战略基石</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">理解经营环境与公司战略</div>
+      <div class="tags"><span class="tag">使命/愿景/价值观</span><span class="tag">订单赢得与资格要素</span><span class="tag">五力模型·SWOT·标杆</span><span class="tag">价值链分析</span><span class="tag">推拉边界 MTS/ATO/CTO/MTO/ETO</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">理解、对齐并实施职能与运营战略</div>
+      <div class="tags"><span class="tag">核心竞争力</span><span class="tag">技术选择 ERP/自动化/AI</span><span class="tag">自制-外购分析</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">设计与战略目标一致的流程</div>
+      <div class="tags"><span class="tag">产品-过程矩阵</span><span class="tag">服务决策权衡</span><span class="tag">制造布局</span><span class="tag">产品/服务生命周期</span></div></div></div>
+    <div class="sub"><div class="lt">D</div><div class="sc"><div class="st">定义并监控关键绩效指标(KPI)</div>
+      <div class="tags"><span class="tag">现金循环周期</span><span class="tag">运营指标·订单满足率</span><span class="tag">SCOR·平衡计分卡</span></div></div></div>
+    <div class="sub"><div class="lt">E</div><div class="sc"><div class="st">识别与管理供应链风险</div>
+      <div class="tags"><span class="tag">供应链映射</span><span class="tag">业务连续性 BCP</span><span class="tag">FMEA·ISO 风险标准</span><span class="tag">物理/网络安全</span></div></div></div>
+    <div class="sub"><div class="lt">F</div><div class="sc"><div class="st">支持可持续发展目标</div>
+      <div class="tags"><span class="tag">三重底线 TBL</span><span class="tag">可持续指标</span><span class="tag">GRI·ISO·UN 全球契约</span><span class="tag">可持续采购</span></div></div></div>
+  </div>
+</div>
+
+<!-- II -->
+<div class="module g1">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 II · 权重 10%</div>
+    <div class="cn">开展销售与运营计划(S&OP)</div>
+    <div class="en">Conduct Sales &amp; Operations Planning to Support Strategy</div>
+    <div class="wbar"><i style="width:71%"></i></div><div class="wlabel">10% — 战略落地的桥梁</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">理解 S&OP 在计划体系中的角色</div>
+      <div class="tags"><span class="tag">计划与控制层级</span><span class="tag">角色与职责</span><span class="tag">计划期·产品族·聚合层</span><span class="tag">S&OP 五步流程</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">评估综合需求计划</div>
+      <div class="tags"><span class="tag">产品组合·新品导入 NPI</span><span class="tag">全渠道需求来源</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">评估综合供应计划</div>
+      <div class="tags"><span class="tag">内/外部供应能力</span><span class="tag">综合生产计划</span><span class="tag">资源计划</span><span class="tag">战略缓冲·瓶颈 CCR</span></div></div></div>
+    <div class="sub"><div class="lt">D</div><div class="sc"><div class="st">协调产品组合/需求/供应/财务计划</div>
+      <div class="tags"><span class="tag">量/品组合权衡</span><span class="tag">财务影响 COGS/PPV/毛利</span><span class="tag">供需平衡方法</span></div></div></div>
+  </div>
+</div>
+
+<div class="tier"><span class="bar" style="background:var(--g2)"></span>计划层 · 从需求到供应再到库存的主计划链</div>
+
+<!-- III -->
+<div class="module g2">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 III · 权重 12%</div>
+    <div class="cn">计划与管理需求</div>
+    <div class="en">Plan and Manage Demand</div>
+    <div class="wbar"><i style="width:86%"></i></div><div class="wlabel">12% — 需求侧</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">支持客户需求与规格</div>
+      <div class="tags"><span class="tag">客户细分</span><span class="tag">CRM</span><span class="tag">POS·CPFR 协同</span><span class="tag">交付绩效指标</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">营销与产品管理考量</div>
+      <div class="tags"><span class="tag">促销对需求的影响</span><span class="tag">QFD·VOC·模块化</span><span class="tag">工程变更·版本控制</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">评估需求来源</div>
+      <div class="tags"><span class="tag">需求渠道 B2B/B2C/全渠道</span><span class="tag">独立需求·VMI</span><span class="tag">相关需求</span></div></div></div>
+    <div class="sub"><div class="lt">D</div><div class="sc"><div class="st">支持需求预测流程</div>
+      <div class="tags"><span class="tag">定性法 Delphi/类比</span><span class="tag">时间序列·移动平均·指数平滑</span><span class="tag">回归·关联法</span><span class="tag">ML/AI 高级分析</span></div></div></div>
+    <div class="sub"><div class="lt">E</div><div class="sc"><div class="st">评估预测绩效并应对需求变化</div>
+      <div class="tags"><span class="tag">误差指标 MAD/MAPE/MSE</span><span class="tag">偏差·跟踪信号</span><span class="tag">缓解牛鞭效应</span></div></div></div>
+  </div>
+</div>
+
+<!-- IV -->
+<div class="module g2">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 IV · 权重 12%</div>
+    <div class="cn">计划与管理内部供应来源</div>
+    <div class="en">Plan and Manage Internal Supply Sources</div>
+    <div class="wbar"><i style="width:86%"></i></div><div class="wlabel">12% — 主排程与 MRP</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">支持主生产排程(MPS)流程</div>
+      <div class="tags"><span class="tag">主排程角色</span><span class="tag">不同生产环境</span><span class="tag">NPI 排程·DFMA</span><span class="tag">MPS·ATP·BOM 层级</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">编制粗能力计划(RCCP)</div>
+      <div class="tags"><span class="tag">关键资源能力</span><span class="tag">负荷-能力平衡</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">管理物料需求计划(MRP)</div>
+      <div class="tags"><span class="tag">毛/净需求</span><span class="tag">提前期·批量</span><span class="tag">计划下达·例外信息</span></div></div></div>
+    <div class="sub"><div class="lt">D</div><div class="sc"><div class="st">支持总装排程(FAS)</div>
+      <div class="tags"><span class="tag">最终装配计划</span><span class="tag">订单承诺</span></div></div></div>
+    <div class="sub"><div class="lt">E</div><div class="sc"><div class="st">监控产品成本</div>
+      <div class="tags"><span class="tag">吸收/变动成本</span><span class="tag">作业成本法 ABC</span><span class="tag">差异分析</span></div></div></div>
+    <div class="sub"><div class="lt">F</div><div class="sc"><div class="st">管理变更与供应中断</div>
+      <div class="tags"><span class="tag">工程变更 ECN</span><span class="tag">重排程·应急</span></div></div></div>
+  </div>
+</div>
+
+<!-- V -->
+<div class="module g2">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 V · 权重 11%</div>
+    <div class="cn">计划与管理外部供应来源</div>
+    <div class="en">Plan and Manage External Supply Sources</div>
+    <div class="wbar"><i style="width:79%"></i></div><div class="wlabel">11% — 采购与供应商</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">供应商选择流程</div>
+      <div class="tags"><span class="tag">寻源·评估标准</span><span class="tag">资格认证</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">供应商关系管理(SRM)</div>
+      <div class="tags"><span class="tag">绩效评估</span><span class="tag">协同与分级</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">采购商品与服务</div>
+      <div class="tags"><span class="tag">采购流程</span><span class="tag">3PL/4PL 物流</span><span class="tag">交叉转运·整车 FTL</span></div></div></div>
+    <div class="sub"><div class="lt">D</div><div class="sc"><div class="st">管理供应商变更与中断</div>
+      <div class="tags"><span class="tag">提前期/批量/安全库存调整</span><span class="tag">风险应对</span></div></div></div>
+  </div>
+</div>
+
+<!-- VI -->
+<div class="module g2">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 VI · 权重 14% ★最高</div>
+    <div class="cn">计划与管理库存</div>
+    <div class="en">Plan and Manage Inventory</div>
+    <div class="wbar"><i style="width:100%"></i></div><div class="wlabel">14% — 全考纲第一大重点</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">库存计划</div>
+      <div class="tags"><span class="tag">ABC 分类·物料分段</span><span class="tag">订货法 MRP/DRP/ROP/min-max/两箱/看板</span><span class="tag">EOQ 经济订货量</span><span class="tag">安全库存·供应天数 DOS</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">库存管理</div>
+      <div class="tags"><span class="tag">库存类型与职能</span><span class="tag">补货策略</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">监控与管理库存成本</div>
+      <div class="tags"><span class="tag">持有/订货/缺货成本</span><span class="tag">库存周转</span></div></div></div>
+    <div class="sub"><div class="lt">D</div><div class="sc"><div class="st">库存控制</div>
+      <div class="tags"><span class="tag">周期盘点·实物盘点</span><span class="tag">记录准确性</span></div></div></div>
+    <div class="sub"><div class="lt">E</div><div class="sc"><div class="st">管理退货与产品处置</div>
+      <div class="tags"><span class="tag">逆向物流</span><span class="tag">报废/再利用处置</span></div></div></div>
+  </div>
+</div>
+
+<div class="tier"><span class="bar" style="background:var(--g3)"></span>执行层 · 把计划落到车间排程与交付分销</div>
+
+<!-- VII -->
+<div class="module g3">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 VII · 权重 12%</div>
+    <div class="cn">计划、管理与执行详细排程</div>
+    <div class="en">Plan, Manage, and Execute Detailed Schedules</div>
+    <div class="wbar"><i style="width:86%"></i></div><div class="wlabel">12% — 车间执行</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">编制详细排程</div>
+      <div class="tags"><span class="tag">排序规则</span><span class="tag">能力需求计划 CRP</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">制定生产与人力排程</div>
+      <div class="tags"><span class="tag">效率·利用率·生产率</span><span class="tag">takt time·节拍</span><span class="tag">投入-产出控制</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">实施与管理详细排程</div>
+      <div class="tags"><span class="tag">看板·拉动系统</span><span class="tag">瓶颈管理 TOC</span><span class="tag">精益执行</span></div></div></div>
+  </div>
+</div>
+
+<!-- VIII -->
+<div class="module g3">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 VIII · 权重 8%</div>
+    <div class="cn">计划与管理分销</div>
+    <div class="en">Plan and Manage Distribution</div>
+    <div class="wbar"><i style="width:57%"></i></div><div class="wlabel">8% — 权重最低</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">规划分销</div>
+      <div class="tags"><span class="tag">分销需求计划 DRP</span><span class="tag">时间分段逻辑</span><span class="tag">服务水平·库存周转</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">管理客户订单</div>
+      <div class="tags"><span class="tag">订单履行</span><span class="tag">交付绩效</span></div></div></div>
+  </div>
+</div>
+
+<div class="tier"><span class="bar" style="background:var(--g4)"></span>支撑层 · 贯穿全流程的质量、改进与技术</div>
+
+<!-- IX -->
+<div class="module g4">
+  <div class="mhead"><div class="stripe"></div>
+    <div class="num">模块 IX · 权重 9%</div>
+    <div class="cn">管理质量、持续改进与技术</div>
+    <div class="en">Manage Quality, Continuous Improvement, and Technology</div>
+    <div class="wbar"><i style="width:64%"></i></div><div class="wlabel">9% — 横向使能</div>
+  </div>
+  <div class="body">
+    <div class="sub"><div class="lt">A</div><div class="sc"><div class="st">质量管理</div>
+      <div class="tags"><span class="tag">TQM 全面质量管理</span><span class="tag">六西格玛</span><span class="tag">QFD·VOC</span><span class="tag">质量成本</span></div></div></div>
+    <div class="sub"><div class="lt">B</div><div class="sc"><div class="st">持续改进</div>
+      <div class="tags"><span class="tag">精益·消除浪费</span><span class="tag">Kaizen·价值流</span><span class="tag">PDCA·DMAIC</span></div></div></div>
+    <div class="sub"><div class="lt">C</div><div class="sc"><div class="st">技术管理</div>
+      <div class="tags"><span class="tag">ERP·先进计划</span><span class="tag">自动化</span><span class="tag">AI/ML 数据分析</span></div></div></div>
+  </div>
+</div>
+
+<footer>
+  考试形式:150 题(含 20 道不计分预测题),时长 3.5 小时 · 资料来源:ASCM CPIM Exam Content Manual v9.0(2026-06-01 生效)。<br>
+  说明:模块名称与权重为官方考纲原文;「战略层/计划层/执行层/支撑层」分组为便于记忆的学习框架,非官方分类。标签为各主题下的代表性概念(非完整清单)。
+</footer>
+</div>
+</body>
+</html>

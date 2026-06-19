@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>供应链 · 运营 · 管理 全景知识阶梯</title>
+<style>
+  :root{
+    --bg:#f5f6f9; --ink:#1d2330; --sub:#5b6473; --line:#dde2ea; --card:#fff; --gold:#c9971b;
+    --x:#0f9d72; --xbg:#e8f7f1; --res:#475569; --resbg:#eef1f5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,Segoe UI,sans-serif;
+    line-height:1.5;padding:30px 24px 60px}
+  .wrap{max-width:1240px;margin:0 auto}
+  h1{font-size:25px;margin:0 0 4px;letter-spacing:.5px}
+  .sub{color:var(--sub);font-size:13px;margin-bottom:6px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:12px 0 22px;font-size:12px;color:var(--sub);align-items:center}
+  .legend .a{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--gold)}
+
+  .ladder{display:flex;gap:14px}
+  .axis{flex:0 0 30px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+    padding:6px 0;color:var(--sub);font-size:12px;font-weight:700}
+  .axis .line{flex:1;width:2px;background:linear-gradient(#312e81,#6f98dd);margin:8px 0;border-radius:2px;position:relative}
+  .levels{flex:1;display:flex;flex-direction:column;gap:11px}
+
+  .band{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);
+    box-shadow:0 1px 2px rgba(20,30,50,.04)}
+  .bhead{flex:0 0 210px;padding:13px 15px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+  .bhead .lv{font-size:11px;font-weight:700;opacity:.9;letter-spacing:1px}
+  .bhead .nm{font-size:15.5px;font-weight:700;margin:3px 0 2px}
+  .bhead .ds{font-size:11px;opacity:.92;line-height:1.4}
+  .bbody{flex:1;padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px;align-content:center}
+  .chip{font-size:12px;background:#f1f4f8;border:1px solid #e5e9ef;border-radius:7px;padding:3px 10px;color:#3c4452;white-space:nowrap}
+  .chip small{color:#8a93a3;font-weight:400}
+  .chip.anc{background:#fff7e6;border:1.5px solid var(--gold);color:#7a5d10;font-weight:700}
+
+  .L6 .bhead{background:#312e81} .L5 .bhead{background:#3b40a3} .L4 .bhead{background:#3f51b5}
+  .L3 .bhead{background:#4361c2} .L2 .bhead{background:#4f78cf} .L1 .bhead{background:#5d8ad8} .L0 .bhead{background:#6f98dd}
+
+  .secttl{font-size:14px;font-weight:700;color:var(--ink);margin:26px 0 12px;display:flex;align-items:center;gap:8px}
+  .secttl .bar{width:4px;height:16px;border-radius:3px;background:var(--x)}
+  .secttl.r .bar{background:var(--res)}
+
+  .xgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}
+  .xcard{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--card);box-shadow:0 1px 2px rgba(20,30,50,.04)}
+  .xcard .h{background:var(--x);color:#fff;font-size:13px;font-weight:700;padding:9px 12px}
+  .xcard .b{padding:10px 12px;display:flex;flex-wrap:wrap;gap:5px}
+
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+  .rcard{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--card)}
+  .rcard .h{background:var(--res);color:#fff;font-size:13px;font-weight:700;padding:9px 12px}
+  .rcard .b{padding:10px 12px;font-size:12.5px;color:#3c4452;line-height:1.9}
+
+  footer{margin-top:26px;font-size:11.5px;color:var(--sub);border-top:1px solid var(--line);padding-top:13px}
+  @media print{body{background:#fff;padding:0}.band,.xcard,.rcard{box-shadow:none;break-inside:avoid}}
+  @media (max-width:900px){.xgrid{grid-template-columns:repeat(2,1fr)}.rgrid{grid-template-columns:1fr}.band{flex-direction:column}.bhead{flex-basis:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>供应链 · 运营 · 管理 — 全景知识阶梯</h1>
+  <div class="sub">从执行到系统思维的 7 级抽象阶梯 + 贯穿各层的横向主题 + 资源速查 · 数据截至 2026 年</div>
+  <div class="legend"><span class="a">★ 你的四个锚点:CPIM · CSCP/SCOR DS · CLTD · APQC PCF</span></div>
+
+  <div style="margin:6px 0 18px;font-size:12.5px;"><a href="index.html" style="color:#2563eb;text-decoration:none;font-weight:700;">全景阶梯(本页)</a><span style="color:#ccc;"> · </span><a href="supply-chain-map.html" style="color:#576b95;text-decoration:none;">供应链全局地图</a><span style="color:#ccc;"> · </span><a href="cpim-9.0-map.html" style="color:#576b95;text-decoration:none;">CPIM 9.0 考纲地图</a></div>
+  <div class="ladder">
+    <div class="axis">
+      <span>战略<br>抽象</span>
+      <div class="line"></div>
+      <span>执行<br>具体</span>
+    </div>
+    <div class="levels">
+
+      <div class="band L6">
+        <div class="bhead"><span class="lv">L6 · 元视角</span><span class="nm">系统思维与决策</span><span class="ds">把企业当成一个反馈系统</span></div>
+        <div class="bbody">
+          <span class="chip">系统思维 · 第五项修炼(Senge)</span>
+          <span class="chip">系统动力学 <small>牛鞭效应之源</small></span>
+          <span class="chip">Cynefin 决策框架</span>
+          <span class="chip">复杂适应系统 CAS</span>
+          <span class="chip">约束理论哲学《目标》</span>
+        </div>
+      </div>
+
+      <div class="band L5">
+        <div class="bhead"><span class="lv">L5 · 战略层</span><span class="nm">战略管理</span><span class="ds">定方向、配资源、做取舍</span></div>
+        <div class="bbody">
+          <span class="chip">Porter 五力 · 价值链 · 通用战略</span>
+          <span class="chip">蓝海战略</span>
+          <span class="chip">平衡计分卡 BSC + 战略地图</span>
+          <span class="chip">方针管理 Hoshin · OKR</span>
+          <span class="chip">商业模式画布</span>
+          <span class="chip">PESTEL · VRIO 资源基础观</span>
+        </div>
+      </div>
+
+      <div class="band L4">
+        <div class="bhead"><span class="lv">L4 · 架构层</span><span class="nm">能力与企业架构</span><span class="ds">企业由哪些能力构成、如何对齐</span></div>
+        <div class="bbody">
+          <span class="chip">业务架构 BIZBOK <small>能力地图</small></span>
+          <span class="chip">企业架构 TOGAF · ArchiMate</span>
+          <span class="chip">Zachman · FEAF</span>
+          <span class="chip">价值流 Value Streams</span>
+          <span class="chip">价值网络</span>
+        </div>
+      </div>
+
+      <div class="band L3">
+        <div class="bhead"><span class="lv">L3 · 流程地图层</span><span class="nm">流程参考与分类</span><span class="ds">有哪些流程 · 统一语言与对标</span></div>
+        <div class="bbody">
+          <span class="chip anc">★ APQC PCF <small>企业全景·13类</small></span>
+          <span class="chip anc">★ SCOR DS <small>供应链7流程</small></span>
+          <span class="chip">DCOR 设计链 · CCOR 客户链</span>
+          <span class="chip">ISO 流程/管理体系标准</span>
+          <span class="chip">ITIL · eTOM <small>他领域参考</small></span>
+        </div>
+      </div>
+
+      <div class="band L2">
+        <div class="bhead"><span class="lv">L2 · 领域专精层</span><span class="nm">领域知识与认证</span><span class="ds">每个领域怎么做专业</span></div>
+        <div class="bbody">
+          <span class="chip anc">★ CPIM <small>计划与库存</small></span>
+          <span class="chip anc">★ CSCP <small>端到端供应链</small></span>
+          <span class="chip anc">★ CLTD <small>物流运输分销</small></span>
+          <span class="chip">CTSC <small>供应链转型</small></span>
+          <span class="chip">ISM CPSM · CIPS <small>采购</small></span>
+          <span class="chip">ASQ · 六西格玛 <small>质量</small></span>
+          <span class="chip">PMI PMP <small>项目</small></span>
+          <span class="chip">DDI CDDP/CDDL <small>需求驱动</small></span>
+          <span class="chip">CSCMP SCpro</span>
+        </div>
+      </div>
+
+      <div class="band L1">
+        <div class="bhead"><span class="lv">L1 · 方法层</span><span class="nm">改进方法与运营计划</span><span class="ds">怎么把流程持续做好</span></div>
+        <div class="bbody">
+          <span class="chip">精益 / TPS</span>
+          <span class="chip">六西格玛 / 精益六西格玛</span>
+          <span class="chip">约束理论 TOC</span>
+          <span class="chip">DDMRP 需求驱动MRP</span>
+          <span class="chip">BPM 流程管理 · BPR 再造</span>
+          <span class="chip">对标 Benchmarking</span>
+          <span class="chip">S&amp;OP → IBP 集成业务计划</span>
+          <span class="chip">卓越运营 Baldrige · EFQM · Shingo</span>
+          <span class="chip">价值流管理 VSM · Flow · SAFe</span>
+        </div>
+      </div>
+
+      <div class="band L0">
+        <div class="bhead"><span class="lv">L0 · 使能层</span><span class="nm">数字化与技术</span><span class="ds">流程最终落到系统里跑起来</span></div>
+        <div class="bbody">
+          <span class="chip">ERP · APS 高级排程</span>
+          <span class="chip">WMS · TMS · MES · PLM · SRM</span>
+          <span class="chip">控制塔 Control Tower</span>
+          <span class="chip">数字孪生 Digital Twin</span>
+          <span class="chip">AI/ML · IoT · RPA · 区块链</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="secttl"><span class="bar"></span>贯穿各层的横向主题(不属某一层,却处处都在)</div>
+  <div class="xgrid">
+    <div class="xcard"><div class="h">学科根基</div><div class="b">
+      <span class="chip">运营管理 OM/POM</span><span class="chip">运筹学/管理科学 OR</span><span class="chip">系统动力学</span><span class="chip">供应链管理学科</span></div></div>
+    <div class="xcard"><div class="h">治理·风险·合规</div><div class="b">
+      <span class="chip">GRC</span><span class="chip">COSO · ERM</span><span class="chip">ISO 31000</span><span class="chip">COBIT IT治理</span></div></div>
+    <div class="xcard"><div class="h">数据与知识</div><div class="b">
+      <span class="chip">DAMA-DMBOK</span><span class="chip">主数据 MDM</span><span class="chip">知识管理 KM</span><span class="chip">数据分析/BI</span></div></div>
+    <div class="xcard"><div class="h">可持续 · ESG</div><div class="b">
+      <span class="chip">循环经济</span><span class="chip">GRI·SASB·TCFD·ISSB</span><span class="chip">UN SDGs</span><span class="chip">Scope 3 排放</span></div></div>
+    <div class="xcard"><div class="h">数字化总图</div><div class="b">
+      <span class="chip">工业 4.0/智能制造</span><span class="chip">数字供应链</span><span class="chip">Gartner 成熟度模型</span><span class="chip">自治供应链</span></div></div>
+  </div>
+
+  <div class="secttl r"><span class="bar"></span>资源速查(去哪学)</div>
+  <div class="rgrid">
+    <div class="rcard"><div class="h">标准组织</div><div class="b">
+      The Open Group(TOGAF)· Business Architecture Guild(BIZBOK)· ASCM/APICS · APQC · CSCMP · ISM · CIPS · ASQ · PMI · ISACA(COBIT)· COSO · DAMA · NIST(Baldrige)· EFQM · Shingo Institute · Gartner</div></div>
+    <div class="rcard"><div class="h">必读书</div><div class="b">
+      《目标 The Goal》· 《第五项修炼》· 《精益思想》· 《改造企业 Reengineering》· Porter《竞争战略》· 《商业模式新生代》· 《改变世界的机器》· Chopra &amp; Meindl《供应链管理》· Nahmias《Production &amp; Operations Analysis》</div></div>
+    <div class="rcard"><div class="h">系统课程</div><div class="b">
+      MITx 供应链管理 MicroMasters(edX)· MBA 运营管理 · 运筹学公开课 · ASCM 各认证学习包 · Coursera 供应链/流程管理专项</div></div>
+  </div>
+
+  <footer>
+    读图逻辑:越往上越抽象(战略/系统),越往下越具体(执行/技术)。同一件事在不同层有不同问法 —— L3 问"有哪些流程",L2 问"怎么做专业",L1 问"怎么持续做好",L4/L5/L6 问"该往哪个方向、用什么能力、按什么系统逻辑去做"。<br>
+    四个锚点:APQC PCF=企业全景流程地图(L3)· SCOR DS=供应链流程标准(L3)· CSCP=端到端战略视角(L2)· CPIM/CLTD=领域级执行专精(L2)。它们是整台系统里"供应链与流程"那一段的硬功夫,方向由更上层决定。<br>
+    说明:分层与横向划分为便于理解的学习框架,非任何单一机构的官方分类。
+  </footer>
+</div>
+</body>
+</html>
