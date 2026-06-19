@@ -13,6 +13,8 @@
 Settings → Pages → Source 选择 `main` 分支根目录 `/ (root)`，保存后访问：
 `https://<用户名>.github.io/<仓库名>/`
 
+首页：https://alexchan90.github.io/knowledge-map/
+
 ## 说明
 
 锚点：APQC PCF / SCOR DS = 流程地图层；CPIM / CSCP / CLTD = 领域专精层。
